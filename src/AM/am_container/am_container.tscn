@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://pfqf08o1n13i"]
+
+[ext_resource type="Script" path="res://src/AM/am_container/am_container.gd" id="1_4bhy0"]
+
+[node name="AMContainer" type="Node"]
+script = ExtResource("1_4bhy0")

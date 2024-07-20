@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://blk8d2s18fyhr"]
+
+[ext_resource type="Script" path="res://src/dev/dev.gd" id="1_r8no1"]
+[ext_resource type="PackedScene" uid="uid://pfqf08o1n13i" path="res://src/AM/am_container/am_container.tscn" id="2_m3wt8"]
+[ext_resource type="PackedScene" uid="uid://dtx5oyt1pupve" path="res://src/AM/am_track/am_track.tscn" id="3_eimfl"]
+[ext_resource type="AudioStream" uid="uid://dic35mlpmphqn" path="res://src/assets/tracks/00.wav" id="4_urpcv"]
+[ext_resource type="AudioStream" uid="uid://caoyopb4b0qtd" path="res://src/assets/tracks/01.wav" id="5_oh7p5"]
+[ext_resource type="AudioStream" uid="uid://dkowtwncs1i8a" path="res://src/assets/tracks/02.wav" id="6_tfhom"]
+
+[node name="dev" type="Node2D"]
+script = ExtResource("1_r8no1")
+
+[node name="AMContainer" parent="." instance=ExtResource("2_m3wt8")]
+fade_time = 1.0
+
+[node name="AMTrack" parent="AMContainer" instance=ExtResource("3_eimfl")]
+
+[node name="AudioStreamPlayer" parent="AMContainer/AMTrack" index="0"]
+stream = ExtResource("4_urpcv")
+
+[node name="AMTrack2" parent="AMContainer" instance=ExtResource("3_eimfl")]
+level = 1
+
+[node name="AudioStreamPlayer" parent="AMContainer/AMTrack2" index="0"]
+stream = ExtResource("5_oh7p5")
+
+[node name="AMTrack3" parent="AMContainer" instance=ExtResource("3_eimfl")]
+level = 2
+debug = true
+
+[node name="AudioStreamPlayer" parent="AMContainer/AMTrack3" index="0"]
+stream = ExtResource("6_tfhom")
+
+[editable path="AMContainer/AMTrack"]
+[editable path="AMContainer/AMTrack2"]
+[editable path="AMContainer/AMTrack3"]

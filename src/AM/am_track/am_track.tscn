@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtx5oyt1pupve"]
+
+[ext_resource type="Script" path="res://src/AM/am_track/am_track.gd" id="1_idp3n"]
+
+[node name="AMTrack" type="Node"]
+script = ExtResource("1_idp3n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
